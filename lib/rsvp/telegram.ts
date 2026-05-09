@@ -132,6 +132,14 @@ export const sendTelegramRsvp = async (
     );
 
     if (!response.ok) {
+      const telegramResponseText = await response.text().catch(() => '');
+      console.error('Telegram sendMessage failed', {
+        status: response.status,
+        statusText: response.statusText,
+        response: telegramResponseText,
+        chatId: config.chatId
+      });
+
       return {
         ok: false,
         status: 502,
@@ -143,7 +151,9 @@ export const sendTelegramRsvp = async (
     }
 
     return { ok: true };
-  } catch {
+  } catch (error) {
+    console.error('Telegram sendMessage request failed', error);
+
     return {
       ok: false,
       status: 502,
