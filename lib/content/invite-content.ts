@@ -367,8 +367,8 @@ export const inviteContent: InviteContent = {
   },
   assets: {
     audio: {
-      path: '/placeholders/audio/our-song.wav',
-      title: 'Наша мелодия (placeholder)'
+      path: '/music/walks-sebastian-jautschus.mp3',
+      title: 'Walks — Sebastian Jautschus'
     }
   },
   rsvp: {
@@ -614,8 +614,8 @@ export const inviteContentUk: InviteContent = {
   },
   assets: {
     audio: {
-      path: '/placeholders/audio/our-song.wav',
-      title: 'Наша мелодія (placeholder)'
+      path: '/music/walks-sebastian-jautschus.mp3',
+      title: 'Walks — Sebastian Jautschus'
     }
   },
   rsvp: {

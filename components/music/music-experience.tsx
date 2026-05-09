@@ -2,7 +2,7 @@
 
 import { EnvelopeIntro } from '@/components/intro';
 import { useLocaleUi } from '@/lib/i18n/locale-context';
-import { useCallback, useId, useMemo, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState, type ReactNode } from 'react';
 import styles from './music-experience.module.css';
 
 type PlaybackStatus = 'idle' | 'playing' | 'paused' | 'blocked' | 'unavailable';
@@ -38,6 +38,12 @@ export function MusicExperience({
   const audioRef = useRef<HTMLAudioElement>(null);
   const statusId = useId();
   const [playbackStatus, setPlaybackStatus] = useState<PlaybackStatus>('idle');
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.28;
+    }
+  }, []);
 
   const attemptPlayback = useCallback(async () => {
     const audio = audioRef.current;

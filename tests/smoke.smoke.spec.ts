@@ -181,7 +181,7 @@ test('placeholder audio does not emit a console 404 on the title sheet', async (
 
   expect(
     consoleErrors.filter(
-      (message) => message.includes('/placeholders/audio/our-song.wav') || message.includes('404 (Not Found)')
+      (message) => message.includes('/music/walks-sebastian-jautschus.mp3') || message.includes('404 (Not Found)')
     )
   ).toEqual([]);
 });

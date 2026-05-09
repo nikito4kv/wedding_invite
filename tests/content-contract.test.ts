@@ -51,8 +51,8 @@ describe('invite content contract', () => {
 
   it('keeps the audio placeholder centralized for the music control', () => {
     expect(inviteContent.assets.audio).toEqual({
-      path: '/placeholders/audio/our-song.wav',
-      title: 'Наша мелодия (placeholder)'
+      path: '/music/walks-sebastian-jautschus.mp3',
+      title: 'Walks — Sebastian Jautschus'
     });
   });
 
