@@ -1,0 +1,49 @@
+.switcher {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  left: max(0.75rem, env(safe-area-inset-left));
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem;
+  border: 1px solid rgba(138, 101, 75, 0.18);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)),
+    rgba(255, 251, 245, 0.78);
+  box-shadow: 0 12px 30px rgba(72, 45, 30, 0.1), var(--shadow-inset);
+  backdrop-filter: blur(12px);
+}
+
+.option {
+  appearance: none;
+  min-width: 2.55rem;
+  min-height: 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.optionActive {
+  background: rgba(36, 63, 56, 0.92);
+  color: #fff8ef;
+  box-shadow: 0 8px 18px rgba(36, 63, 56, 0.16);
+}
+
+@media (max-width: 30rem) {
+  .switcher {
+    top: max(0.55rem, env(safe-area-inset-top));
+    left: max(0.55rem, env(safe-area-inset-left));
+  }
+
+  .option {
+    min-width: 2.25rem;
+    min-height: 1.85rem;
+    font-size: 0.72rem;
+  }
+}

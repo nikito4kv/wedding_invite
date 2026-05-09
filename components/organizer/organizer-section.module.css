@@ -1,0 +1,65 @@
+.section {
+  padding-block: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: clamp(2.15rem, 1.75rem + 1.5vw, 3rem);
+  line-height: 0.98;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  background: rgba(255, 255, 255, 0.45);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.name {
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--color-text-secondary);
+}
+
+.telegramLink {
+  width: fit-content;
+  color: var(--color-brown-warm);
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 30rem) {
+  .list {
+    gap: var(--space-3);
+  }
+
+  .card {
+    padding: 0.85rem;
+  }
+
+  .name,
+  .meta,
+  .telegramLink {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+}

@@ -1,0 +1,366 @@
+.section {
+  padding-block: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.panel {
+  display: grid;
+  gap: clamp(1.25rem, 3.2vw, 2rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow: clip;
+}
+
+.panel::after {
+  content: '';
+  position: absolute;
+  inset: auto -3rem -4rem auto;
+  width: clamp(9rem, 26vw, 14rem);
+  height: clamp(9rem, 26vw, 14rem);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(127, 151, 134, 0.18), transparent 72%);
+  pointer-events: none;
+}
+
+.copyBlock {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brown-warm);
+}
+
+.title {
+  max-width: 16ch;
+  font-size: clamp(2.35rem, 1.9rem + 2vw, 3.7rem);
+  line-height: 0.96;
+}
+
+.lead {
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  color: var(--color-text-secondary);
+}
+
+.noteCard {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 30rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(23, 58, 52, 0.12);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.3)),
+    rgba(215, 229, 220, 0.18);
+}
+
+.noteTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-green-deep);
+}
+
+.noteText {
+  color: var(--color-text-secondary);
+}
+
+.formCard {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid rgba(23, 58, 52, 0.14);
+  border-radius: calc(var(--radius-lg) - 0.15rem);
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(247, 242, 232, 0.84)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.fields {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field,
+.choiceGroup {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.label,
+.legend {
+  padding: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+
+.helperText {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+}
+
+.input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(23, 58, 52, 0.16);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--color-text-primary);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.input::placeholder {
+  color: rgba(29, 48, 43, 0.45);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: rgba(23, 58, 52, 0.4);
+  box-shadow: 0 0 0 4px rgba(215, 229, 220, 0.55);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.choiceGrid,
+.checkboxGrid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.choiceCard,
+.checkboxCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(23, 58, 52, 0.14);
+  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(247, 242, 232, 0.52)),
+    rgba(255, 255, 255, 0.36);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.choiceCard:hover,
+.checkboxCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(23, 58, 52, 0.24);
+}
+
+.choiceCard:has(.choiceInput:focus-visible),
+.checkboxCard:has(.checkboxInput:focus-visible) {
+  border-color: rgba(23, 58, 52, 0.34);
+  box-shadow: 0 0 0 4px var(--focus-ring-soft);
+}
+
+.choiceInput,
+.checkboxInput {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--color-green-deep);
+  flex: 0 0 auto;
+}
+
+.choiceLabel,
+.checkboxLabel {
+  color: var(--color-text-primary);
+}
+
+.choiceCard:has(.choiceInput:checked),
+.checkboxCard:has(.checkboxInput:checked) {
+  border-color: rgba(23, 58, 52, 0.36);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(215, 229, 220, 0.62)),
+    rgba(255, 255, 255, 0.5);
+  box-shadow: 0 16px 34px rgba(23, 58, 52, 0.08);
+}
+
+.errorText {
+  font-size: 0.92rem;
+  color: #9a3f31;
+}
+
+.statusCard {
+  display: grid;
+  gap: var(--space-2);
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(23, 58, 52, 0.12);
+}
+
+.statusCardSuccess {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(215, 229, 220, 0.74)),
+    rgba(215, 229, 220, 0.26);
+}
+
+.statusCardError {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(247, 232, 224, 0.92)),
+    rgba(247, 222, 214, 0.42);
+  border-color: rgba(154, 63, 49, 0.18);
+}
+
+.statusEyebrow {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brown-warm);
+}
+
+.statusTitle {
+  font-size: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+}
+
+.statusText {
+  color: var(--color-text-secondary);
+}
+
+.contactList {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactItem {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.contactName {
+  font-weight: 700;
+  color: var(--color-green-deep);
+}
+
+.contactLink {
+  width: fit-content;
+  color: var(--color-brown-warm);
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.22em;
+}
+
+.submitButton {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  min-height: 3.35rem;
+  padding: 0.9rem 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(23, 58, 52, 0.96), rgba(42, 88, 79, 0.92)),
+    rgba(23, 58, 52, 1);
+  box-shadow: 0 18px 34px rgba(23, 58, 52, 0.18);
+  font-weight: 700;
+  color: #f9f5ee;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 40px rgba(23, 58, 52, 0.22);
+}
+
+.submitButton:focus-visible {
+  outline: 3px solid rgba(215, 229, 220, 0.72);
+  outline-offset: 3px;
+}
+
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.78;
+  transform: none;
+  box-shadow: 0 12px 24px rgba(23, 58, 52, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .input,
+  .choiceCard,
+  .checkboxCard,
+  .submitButton {
+    transition: none;
+  }
+
+  .choiceCard:hover,
+  .checkboxCard:hover,
+  .submitButton:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+@media (min-width: 56rem) {
+  .panel {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: start;
+  }
+
+  .choiceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .checkboxGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 30rem) {
+  .section {
+    padding-block: clamp(0.8rem, 4vw, 1.3rem);
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .formCard {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .choiceCard,
+  .checkboxCard,
+  .input,
+  .submitButton {
+    min-height: 3.15rem;
+  }
+}

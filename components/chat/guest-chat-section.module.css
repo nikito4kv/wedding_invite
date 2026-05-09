@@ -1,0 +1,53 @@
+.section {
+  padding-block: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: clamp(2.15rem, 1.75rem + 1.5vw, 3rem);
+  line-height: 0.98;
+}
+
+.description {
+  color: var(--color-text-secondary);
+}
+
+.chatLink {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.05rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface-strong);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.chatLink:focus-visible {
+  box-shadow: 0 0 0 4px var(--focus-ring-soft);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .chatLink:hover {
+    transform: translateY(-1px);
+    border-color: rgba(23, 58, 52, 0.28);
+    box-shadow: var(--shadow-soft);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chatLink {
+    transition: none;
+  }
+}

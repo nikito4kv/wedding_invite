@@ -1,0 +1,40 @@
+.shell {
+  position: relative;
+  min-height: 100dvh;
+  overflow: clip;
+}
+
+.shell::before,
+.shell::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.shell::before {
+  inset: 2rem auto auto -3rem;
+  width: clamp(10rem, 26vw, 18rem);
+  height: clamp(10rem, 26vw, 18rem);
+  background: radial-gradient(circle, rgba(215, 229, 220, 0.52), transparent 72%);
+}
+
+.shell::after {
+  inset: auto -4rem 3rem auto;
+  width: clamp(11rem, 28vw, 20rem);
+  height: clamp(11rem, 28vw, 20rem);
+  background: radial-gradient(circle, rgba(221, 206, 180, 0.38), transparent 74%);
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  isolation: isolate;
+}
+
+.main {
+  position: relative;
+  min-height: 100dvh;
+}

@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F2E8"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="196" cy="156" r="120" fill="#D7E5DC" fill-opacity="0.84"/>
+  <circle cx="1018" cy="150" r="132" fill="#E8D0A9" fill-opacity="0.86"/>
+  <path d="M0 394C146 356 276 334 420 334C596 334 710 378 882 378C1010 378 1111 353 1200 314V630H0V394Z" fill="#86A194" fill-opacity="0.74"/>
+  <path d="M0 456C148 424 290 422 430 444C582 468 728 522 895 522C1011 522 1107 497 1200 452V630H0V456Z" fill="#173A34"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" stroke="#FFF9F0" stroke-opacity="0.56" stroke-width="2"/>
+  <text x="600" y="192" fill="#7D5E45" font-family="Arial, sans-serif" font-size="28" letter-spacing="10" text-anchor="middle">СВАДЕБНОЕ ПРИГЛАШЕНИЕ</text>
+  <text x="600" y="315" fill="#173A34" font-family="Georgia, 'Times New Roman', serif" font-size="98" text-anchor="middle">Никита &amp; София</text>
+  <text x="600" y="382" fill="#173A34" fill-opacity="0.78" font-family="Georgia, 'Times New Roman', serif" font-size="36" text-anchor="middle">14 июля 2026 • Квариати, Georgia</text>
+  <text x="600" y="468" fill="#FFF8EF" font-family="Arial, sans-serif" font-size="30" letter-spacing="6" text-anchor="middle">ТЁПЛЫЙ ДЕНЬ У МОРЯ, ПРОГРАММА И RSVP</text>
+  <defs>
+    <linearGradient id="bg" x1="600" y1="0" x2="600" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCF8F0"/>
+      <stop offset="0.48" stop-color="#E8DECE"/>
+      <stop offset="1" stop-color="#D7CDBB"/>
+    </linearGradient>
+  </defs>
+</svg>

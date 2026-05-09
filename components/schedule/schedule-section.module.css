@@ -1,0 +1,125 @@
+.panel {
+  position: relative;
+  height: 100%;
+  padding: clamp(1.35rem, 4vw, 2.15rem);
+  overflow: hidden;
+  border-radius: clamp(1.35rem, 4vw, 2.2rem);
+  background:
+    radial-gradient(circle at 80% 16%, rgba(255, 255, 255, 0.62), transparent 42%),
+    linear-gradient(180deg, rgba(255, 253, 249, 0.5), rgba(255, 250, 245, 0.26));
+  box-shadow: 0 20px 52px rgba(72, 45, 30, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.eyebrow {
+  color: var(--color-brown-warm);
+  font-family: var(--font-script-accent), var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.title {
+  font-size: clamp(2rem, 4.8vw, 3.2rem);
+  line-height: 0.98;
+}
+
+.copy {
+  color: var(--color-text-secondary);
+}
+
+.timeline {
+  display: grid;
+  gap: 0.95rem;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, 5.5rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeWrap {
+  position: relative;
+  padding-top: 0.08rem;
+}
+
+.timeWrap::after {
+  content: '';
+  position: absolute;
+  top: 2.15rem;
+  bottom: -1.45rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(183, 139, 135, 0.38), rgba(183, 139, 135, 0));
+}
+
+.item:last-child .timeWrap::after {
+  display: none;
+}
+
+.time {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.25rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 253, 249, 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.64), 0 10px 24px rgba(72, 45, 30, 0.07);
+  color: var(--color-green-deep);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.body {
+  position: relative;
+  padding: 0.1rem 0 1.05rem 1rem;
+}
+
+.body::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.38rem;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgba(169, 101, 97, 0.44);
+}
+
+.itemTitle {
+  font-size: clamp(1.35rem, 3vw, 1.58rem);
+  line-height: 1.08;
+}
+
+.description {
+  margin-top: 0.4rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 30rem) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .timeWrap::after {
+    display: none;
+  }
+
+  .body {
+    padding: 0 0 0.75rem 0.85rem;
+  }
+}
