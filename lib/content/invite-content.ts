@@ -7,7 +7,7 @@ import {
   type GuestFormatValue
 } from '@/lib/constants/rsvp';
 
-const eventDateTimeIso = '2026-07-14T14:00:00+04:00' as const;
+const eventDateTimeIso = '2026-07-14T15:00:00+04:00' as const;
 const mapDestination = 'Georgia, Kvariati, ul. Ioane Lazi, 27' as const;
 type CountdownUnitId = 'days' | 'hours' | 'minutes' | 'seconds';
 
@@ -184,7 +184,7 @@ export const inviteContent: InviteContent = {
   countdown: {
     eyebrow: 'До встречи у моря',
     title: 'Обратный отсчёт до нашего дня',
-    intro: 'Считаем дни, часы и минуты до 14 июля 2026 года, 14:00 по Тбилиси.',
+    intro: 'Считаем дни, часы и минуты до 14 июля 2026 года, 15:00 по Тбилиси.',
     completionLabel: 'Этот момент уже настал — мы празднуем вместе.',
     units: [
       { id: 'days', label: 'дней' },
@@ -249,25 +249,25 @@ export const inviteContent: InviteContent = {
   timeline: [
     {
       id: 'welcome',
-      timeLabel: '14:00',
+      timeLabel: '15:00',
       title: 'Начало праздника',
       description: 'Встречаемся, обнимаемся и открываем этот волшебный день вместе.'
     },
     {
       id: 'ceremony',
-      timeLabel: '14:30',
+      timeLabel: '15:30',
       title: 'Церемония',
       description: 'Самое важное «да» в нашей жизни — будем счастливы разделить этот момент с вами.'
     },
     {
       id: 'banquet',
-      timeLabel: '15:30',
+      timeLabel: '16:30',
       title: 'Банкет',
       description: 'Праздничный стол, тёплые слова и танцы под любимую музыку.'
     },
     {
       id: 'evening-end',
-      timeLabel: '23:00',
+      timeLabel: '00:00',
       title: 'Завершение вечера',
       description: 'Провожаем этот день с благодарностью за вашу любовь и поддержку.'
     }
@@ -432,7 +432,7 @@ export const inviteContentUk: InviteContent = {
   countdown: {
     eyebrow: 'До зустрічі біля моря',
     title: 'Зворотний відлік до нашого дня',
-    intro: 'Рахуємо дні, години й хвилини до 14 липня 2026 року, 14:00 за Тбілісі.',
+    intro: 'Рахуємо дні, години й хвилини до 14 липня 2026 року, 15:00 за Тбілісі.',
     completionLabel: 'Цей момент уже настав — ми святкуємо разом.',
     units: [
       { id: 'days', label: 'днів' },
@@ -499,25 +499,25 @@ export const inviteContentUk: InviteContent = {
   timeline: [
     {
       id: 'welcome',
-      timeLabel: '14:00',
+      timeLabel: '15:00',
       title: 'Початок свята',
       description: 'Зустрічаємося, обіймаємося й відкриваємо цей чарівний день разом.'
     },
     {
       id: 'ceremony',
-      timeLabel: '14:30',
+      timeLabel: '15:30',
       title: 'Церемонія',
       description: 'Найважливіше «так» у нашому житті — будемо щасливі розділити цей момент із вами.'
     },
     {
       id: 'banquet',
-      timeLabel: '15:30',
+      timeLabel: '16:30',
       title: 'Святкова вечеря',
       description: 'Святковий стіл, теплі слова й танці під улюблену музику.'
     },
     {
       id: 'evening-end',
-      timeLabel: '23:00',
+      timeLabel: '00:00',
       title: 'Завершення вечора',
       description: 'Проводжаємо цей день із вдячністю за вашу любов і підтримку.'
     }

@@ -9,9 +9,9 @@ describe('countdown utilities', () => {
     const nowTimestampMs = Date.parse('2026-07-12T11:56:54+04:00');
 
     expect(getCountdownState(eventTimestampMs, nowTimestampMs)).toEqual({
-      totalMs: (((2 * 24 + 2) * 60 + 3) * 60 + 6) * 1_000,
+      totalMs: (((2 * 24 + 3) * 60 + 3) * 60 + 6) * 1_000,
       days: 2,
-      hours: 2,
+      hours: 3,
       minutes: 3,
       seconds: 6,
       isComplete: false
@@ -23,9 +23,9 @@ describe('countdown utilities', () => {
     const sameInstantDifferentOffsetTimestampMs = Date.parse('2026-07-13T07:00:00-03:00');
 
     expect(getCountdownState(eventTimestampMs, georgiaNowTimestampMs)).toEqual({
-      totalMs: 24 * 60 * 60 * 1_000,
+      totalMs: 25 * 60 * 60 * 1_000,
       days: 1,
-      hours: 0,
+      hours: 1,
       minutes: 0,
       seconds: 0,
       isComplete: false
@@ -36,8 +36,8 @@ describe('countdown utilities', () => {
   });
 
   it('clamps the countdown to zero at and after the canonical event instant', () => {
-    const atEventTimestampMs = Date.parse('2026-07-14T14:00:00+04:00');
-    const afterEventTimestampMs = Date.parse('2026-07-14T14:00:45+04:00');
+    const atEventTimestampMs = Date.parse('2026-07-14T15:00:00+04:00');
+    const afterEventTimestampMs = Date.parse('2026-07-14T15:00:45+04:00');
 
     const completeState = {
       totalMs: 0,

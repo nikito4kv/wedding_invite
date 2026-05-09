@@ -292,22 +292,22 @@
 
   .polaroidScene {
     width: min(100%, 24rem);
-    min-height: clamp(23rem, 88vw, 29rem);
+    min-height: clamp(29rem, 106vw, 32rem);
     margin-top: clamp(1.4rem, 5vw, 2rem);
   }
 
   .polaroid {
-    width: clamp(10.6rem, 48vw, 13.4rem);
+    width: clamp(10.2rem, 43vw, 12rem);
     padding: 0.55rem 0.55rem clamp(1.45rem, 6vw, 1.85rem);
   }
 
   .girl {
-    top: 7%;
+    top: 0.5rem;
     left: 6%;
   }
 
   .boy {
-    top: 35%;
+    top: clamp(13.4rem, 53vw, 15rem);
     right: 5%;
   }
 
@@ -388,30 +388,31 @@
 
   .polaroidScene {
     width: min(100%, 21rem);
-    min-height: 23rem;
+    min-height: 27rem;
     margin-top: 1.7rem;
   }
 
   .polaroid {
-    width: clamp(9.9rem, 49vw, 11.8rem);
+    width: clamp(9.4rem, 45vw, 10.6rem);
   }
 
   .girl {
-    left: 5%;
+    left: 0.35rem;
   }
 
   .boy {
-    right: 4%;
+    top: clamp(12.4rem, 54vw, 13.45rem);
+    right: 0.35rem;
   }
 }
 
 @media (max-width: 22.5rem) {
   .polaroidScene {
-    min-height: 20rem;
+    min-height: 25.5rem;
   }
 
   .polaroid {
-    width: 10rem;
+    width: 9.2rem;
   }
 }
 

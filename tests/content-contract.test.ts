@@ -29,9 +29,9 @@ describe('invite content contract', () => {
   });
 
   it('keeps the canonical Georgia datetime', () => {
-    expect(inviteContent.event.datetimeIso).toBe('2026-07-14T14:00:00+04:00');
+    expect(inviteContent.event.datetimeIso).toBe('2026-07-14T15:00:00+04:00');
     expect(inviteContent.event.timezone).toBe('Asia/Tbilisi');
-    expect(inviteContent.event.utcTimestampMs).toBe(Date.parse('2026-07-14T14:00:00+04:00'));
+    expect(inviteContent.event.utcTimestampMs).toBe(Date.parse('2026-07-14T15:00:00+04:00'));
   });
 
   it('builds a safe Google Maps destination URL', () => {
@@ -45,7 +45,7 @@ describe('invite content contract', () => {
 
   it('keeps exact timeline moments in chronological order', () => {
     expect(inviteContent.timeline).toHaveLength(4);
-    expect(inviteContent.timeline.map((item) => item.timeLabel)).toEqual(['14:00', '14:30', '15:30', '23:00']);
+    expect(inviteContent.timeline.map((item) => item.timeLabel)).toEqual(['15:00', '15:30', '16:30', '00:00']);
     expect(inviteContent.timeline.map((item) => item.id)).toEqual(['welcome', 'ceremony', 'banquet', 'evening-end']);
   });
 
